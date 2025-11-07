@@ -26,7 +26,7 @@ const QUICK_AMOUNTS = [0.1, 0.5, 1, 5]
 
 export function CreatorProfile({ creator }: CreatorProfileProps) {
   const [customAmount, setCustomAmount] = useState("")
-  const [selectedAmount, setSelectedAmount] = useState<number | null>(null)
+  // const [selectedAmount, setSelectedAmount] = useState<number | null>(null)
   const [copied, setCopied] = useState(false)
   const [showTipModal, setShowTipModal] = useState(false)
   const [tipAmount, setTipAmount] = useState(0)
@@ -38,7 +38,7 @@ export function CreatorProfile({ creator }: CreatorProfileProps) {
   }
 
   const handleQuickTip = (amount: number) => {
-    setSelectedAmount(amount)
+    // setSelectedAmount(amount)
     setCustomAmount("")
     setTipAmount(amount)
     setShowTipModal(true)
@@ -47,7 +47,7 @@ export function CreatorProfile({ creator }: CreatorProfileProps) {
   const handleCustomTip = () => {
     const amount = Number.parseFloat(customAmount)
     if (amount > 0) {
-      setSelectedAmount(null)
+      // setSelectedAmount(null)
       setTipAmount(amount)
       setShowTipModal(true)
     }

@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react"
-import { useParams, useNavigate } from "react-router"
-import { CreatorCard } from "@/components/creatorCard"
+import { useEffect, useState } from "react"
+import { useParams } from "react-router"
 import { MOCK_CREATORS, type  Creator } from "../data/mockdata"
 import NotFound from "./notfound"
 import { CreatorProfile } from "./creatorProfile"
 
 export default function CreatorPage() {
   const { id } = useParams<{ id: string }>()
-  const navigate = useNavigate()
   const [creator, setCreator] = useState<Creator | null>(null)
-  const [loading, setLoading] = useState(false)
+  // const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     if (!id) return
@@ -35,7 +33,7 @@ export default function CreatorPage() {
     return <NotFound />
   }
 
-  if (loading) return <div className="p-6">Loading...</div>
+  // if (loading) return <div className="p-6">Loading...</div>
 
   if (!creator) {
     // either render a 404 component or redirect
