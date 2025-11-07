@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 // import { ApiPromise } from '@polkadot/api';
 import type { InjectedAccountWithMeta } from '@polkadot/extension-inject/types';
-import { initPolkadotAPI, connectWallet } from '../utils/polkadot';
+import { connectWallet } from '../utils/polkadot';
 
 export function WalletConnect() {
 //   const [api, setApi] = useState<ApiPromise | null>(null);
