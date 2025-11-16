@@ -30,7 +30,7 @@ export function CreatorProfile({ creator }: CreatorProfileProps) {
   const [copied, setCopied] = useState(false)
   const [showTipModal, setShowTipModal] = useState(false)
   const [tipAmount, setTipAmount] = useState(0)
-
+  
   const handleCopyAddress = async () => {
     await navigator.clipboard.writeText(creator.walletAddress)
     setCopied(true)
